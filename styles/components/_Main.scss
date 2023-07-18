@@ -1,0 +1,14 @@
+@import "../utils/variables.scss";
+
+main{
+    width: 100%;
+    max-width: 950px;
+    padding: 20px;
+    background-color: $darker-blue;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

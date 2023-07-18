@@ -1,0 +1,101 @@
+@import "../utils/variables.scss";
+.home-players{
+    padding: 20px;
+    flex-direction: column;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-stats{
+    display: flex;
+    flex-direction: column;
+    background-color: $main-background;
+    padding: 20px;
+    border-radius: 20px;
+    border: 4px solid $border-color;
+    gap: 20px;
+    width: 100%;
+    max-width: 350px;
+    .player-image{
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .stats{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .player-info{
+        text-align: left;
+    }
+    .player-performance{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 1.5rem;
+        & p {
+            text-align: left;
+        }
+        .stat{
+            font-size: 2.5rem;
+        }
+    }
+    .player-value{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .player-stats{
+        flex-direction: row;
+        min-height: unset;
+        max-width: unset;
+        height: 370px;
+        overflow: hidden;
+        .player-image{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: unset;
+            z-index: 0;
+            img{
+                height: 125%;
+                object-position: 0px -10px;
+            }
+        }
+        .stats{
+            z-index: 90;
+            flex-grow: 1;
+            justify-content: center;
+            .player-performance{
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+        .player-value{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            text-align: left;
+            .stat{
+                font-size: 3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+@import "./variables.scss";
+
+@mixin title {
+    font-size: 2.5rem;
+    color: $main-white;
+}
+@mixin button {
+    width: 100%;
+    padding: 20px;
+    font-weight: 700;
+    background-color: #F2C57D;
+    border: 2px solid #FCDBA6;
+    z-index: 999;
+}
+@mixin form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    border: 5px solid $border-color;
+    background-color: $main-background;
+    border-radius: 20px;
+    .input-error{
+        border: 1px solid red;
+    }
+    .error{
+        padding: 5px;
+        color: red;
+    }
+    label{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        color: $main-white;
+        input{
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #304c79;
+            border: 1px solid $border-color;
+            color: $main-white;
+        }
+    }
+    button{
+        @include button
+    }
+}
+
+@mixin player-card{
+    overflow: hidden;
+    height: 645px;
+    width: 100%;
+    max-width: 385px;
+    position: relative;
+    background-color: $main-background;
+    color: $main-white;
+    border: 5px solid $border-color;
+    border-radius: 0 0 8px 8px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    .player-info{
+        z-index: 999;
+        padding: 0 10px;
+        width: 100%;
+        position: absolute;
+        top: 70%;
+        .player-data{
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        .player-position{
+            font-size: 1.5rem;
+            text-transform: capitalize;
+        }
+    }
+    img{
+        object-position: 0px 0px;
+        height: 580px;
+        z-index: 1;
+    }
+    button{
+        width: 100%;
+        padding: 25px;
+        font-weight: 500;
+        background-color: #F2C57D;
+        border: 2px solid #FCDBA6;
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+    }
+    &.active{
+        border: 5px solid #F2C57D;
+        background-color: #FCDBA6;
+    }
+}
+
+@mixin input{
+    padding: 10px;
+    width: 100%;
+}
+
+@mixin player-card-1024px{
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    background-color: $main-background;
+    color: $main-white;
+    border: 5px solid $border-color;
+    border-radius: 0 0 20px 20px;
+    font-weight:500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    .player-info{
+        z-index: 999;
+        padding: 0 10px;
+        width: 100%;
+        position: absolute;
+        top: 65%;
+        .player-data{
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .player-position{
+            font-size: 1.2rem;
+            text-transform: capitalize;
+        }
+    }
+    img{
+        position: absolute;
+        object-position: 0px 0px;
+        object-fit: fill;
+        height: 435px;
+        z-index: 1;
+    }
+    button{
+        width: 100%;
+        padding: 20px;
+        font-weight: 500;
+        background-color: #F2C57D;
+        border: 2px solid #FCDBA6;
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+    }
+    &.active{
+        border: 5px solid #F2C57D;
+        background-color: #FCDBA6;
+    }
+}

@@ -1,0 +1,14 @@
+.search-players{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    gap: 40px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .search-players{
+        min-width: fit-content;
+    }
+}

@@ -1,0 +1,39 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+
+.home{
+    color: $main-white;
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    font-size: 1.7rem;
+    .title{
+        @include title
+    }
+    .home-main{
+        display: flex;
+        flex-grow: 1 ;
+        .home-text{
+            font-size: 1.5rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            p {
+                font-weight: 500;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+    }
+    .home-player{
+        width: 100%;
+    }
+    .wrapper-framer{
+        width: 100%;
+    }
+
+}

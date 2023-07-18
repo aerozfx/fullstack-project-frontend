@@ -1,0 +1,32 @@
+.players-filter{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.filters{
+    color: $main-white;
+    display: flex;
+    flex-direction: column;
+    input{
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+    }
+}
+.loader{
+    display: flex;
+    color: $main-white;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 1024px){
+    .players-filter{
+        min-width: 950px;
+        justify-content: unset;
+        align-items: unset;
+    }
+}

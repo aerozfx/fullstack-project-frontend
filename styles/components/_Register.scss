@@ -1,0 +1,21 @@
+@import "../utils/variables.scss";
+
+.register-form{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .title{
+        font-size: 2.5rem;
+        color: $main-white;
+    }
+    form {
+        @include form;
+        .password-regex{
+            padding: 10px
+        }
+    }
+}

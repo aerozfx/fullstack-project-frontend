@@ -1,0 +1,27 @@
+.my-players{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    gap: 40px;
+    width: 100%;
+    color: $main-white;
+    .my-players-section{
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .my-players{
+        min-width: 950px;
+        .my-players-section{
+            justify-content: unset;
+            align-items: unset;
+        }
+    }
+}

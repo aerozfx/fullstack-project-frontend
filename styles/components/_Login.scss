@@ -1,0 +1,15 @@
+@import "../utils/mixins.scss";
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .title{
+        @include title
+    }
+    form{
+        @include form;
+    }
+}

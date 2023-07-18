@@ -1,0 +1,26 @@
+@import "../utils/mixins.scss";
+@import "../utils//variables.scss";
+
+.search-form{
+    width: 100%;
+    display: flex;
+    input{
+        padding: 10px;
+        flex-grow: 1;
+        border-radius: 8px;
+        color: $main-white;
+        font-weight: 700;
+        background-color: $main-background;
+        border: 3px solid $border-color;
+        &::placeholder{
+            color: $placeholder-color;
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .search-form{
+        min-width: 950px;
+    }
+}
